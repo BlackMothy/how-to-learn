@@ -14,23 +14,23 @@
   color:  #000;
   margin: 0;
   padding: 0;
-  padding-left: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Для скрытия края синенго квадрата, который выходит за пределы блока при уменьшении высоты окна браузера */
 }
 
 .logo {
   width: 183px;
-  height: 32px;
 }
 
 .logo_place_header {
   position: absolute;
   top: 30px;
+  left: 64px;
   z-index: 2;
+  height: 32px;
 }
 
 .header__title {
@@ -39,20 +39,24 @@
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
-  margin: 0;
+  margin: 0 0 0 64px;
+  color: #000;
 }
 
 .header__subtitle {
   width: 388px;
   position: absolute;
   bottom: 30px;
+  left: 64px;
   z-index: 2;
   line-height: 25px;
   font-size: 18px;
   font-weight: 400;
+  color: #000;
+  margin: 0;
 }
 
-.header__link, .feynman__link {
+.header__link {
   color: #2f80ed;
   text-decoration: none;
 }
@@ -84,7 +88,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color:  #000;
 }
 
 .two-columns__brief {
@@ -106,6 +109,11 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: 400;
+  color: #000;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin: 0;
 }
 
 .two-columns__span-accent {
@@ -113,16 +121,11 @@
   font-size: 24px;
   font-weight: 600;
 }
-
-.paragraph_position_last {
-  margin: 0;
-}
 /* Стили двух колонок - конец */
 
 /* Стили секции */
 .digits {
   padding-bottom: 100px;
-  color:  #000;
 }
 
 .section-title {
@@ -132,6 +135,7 @@
   font-size: 60px;
   font-weight: 600;
   margin: 0 auto;
+  color: #000;
 }
 
 .section-subtitle {
@@ -141,6 +145,7 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: 400;
+  color: #000;
 }
 
 .table {
@@ -150,12 +155,13 @@
   justify-content: space-between;
   padding: 0;
   margin: 0 auto;
+  color: #000;
+  list-style: none;
 }
 
 .table__cell {
   margin: 60px 0 0;
   width: 250px;
-  list-style: none;
 }
 
 .table__heading {
@@ -176,7 +182,6 @@
 /* Стили Фейнмана */
 .feynman {
   background-color: #f2f2f2;
-  color: #000;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -193,6 +198,7 @@
   font-weight: 600;
   text-align: center;
   margin: 100px 0 70px;
+  color: #000;
 }
 
 .feynman__subtitle {
@@ -201,6 +207,7 @@
   font-size: 36px;
   font-weight: 400;
   margin: 0;
+  color: #000;
 }
 
 .feynman__link {
@@ -211,6 +218,8 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: 400;
+  color: #2f80ed;
+  text-decoration: none;
 }
 
 .feynman__img {
@@ -226,11 +235,22 @@
 /* Стили Кауфмана */
 .kaufman {
   background-color: #1f1f1f;
-  color: white;
   padding: 90px 0;
   position: relative;
   overflow: hidden;
   z-index: -2;
+}
+
+.section-title_theme_dark {
+  color: white;
+}
+
+.section-subtitle_theme_dark {
+  color: white;
+}
+
+.table_theme_dark {
+  color: white;
 }
 
 .table__cell_theme_dark {
@@ -252,7 +272,6 @@
 /* Стили футера */
 .footer {
   min-height: 350px;
-  color: white;
   background-color: #1f1f1f;
   padding: 60px 0 40px;
 }
@@ -283,6 +302,7 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: 400;
+  color: white;
 }
 
 .footer__column-heading {
@@ -290,6 +310,7 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
+  color: white;
 }
 
 .footer__column-links {
